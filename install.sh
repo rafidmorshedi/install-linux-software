@@ -20,8 +20,8 @@ sound-juicer youtube-dl ubuntu-restricted-extras \
 openssh-server unison stellarium skype hugin vim-gtk xyscan rsync
 
 #configure git (repalce with your user name)
-git config --global user.name "Rafid Morshedi"
-git config --global user.email rafid.morshedi@gmail.com
+git config --global user.name "Your Name"
+git config --global user.email johndoe@example.com
 
 #more things to install
 sudo apt-get -y install darktable librecad freecad blender filezilla \
