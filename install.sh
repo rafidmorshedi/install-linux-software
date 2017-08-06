@@ -34,8 +34,17 @@ klavaro therion
 sensible-browser https://atom.io/download/deb/atom-amd64.deb
 
 #Pauses installs until atom has been installed by the used
-echo Go ahead and install atom
+echo "Go ahead and install atom"
 read -p "Press [Enter] key to move onto installing Chrome"
 
 #install chrome
 sensible-browser https://www.google.com/chrome/browser/desktop/index.html
+
+#Pauses installs until atom has been installed by the used
+echo "Go ahead and install Chrome"
+read -p "Press [Enter] key to move onto installing Anaconda"
+
+#download the anaconda install shell (Python 2.7 version) and run the script
+cd /tmp
+wget https://repo.continuum.io/archive/Anaconda2-4.4.0-Linux-x86_64.sh
+bash Anaconda2-4.4.0-Linux-x86_64.sh
