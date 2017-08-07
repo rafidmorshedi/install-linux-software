@@ -1,8 +1,8 @@
 #update and upgrade
 sudo apt-get update && sudo apt-get upgrade
 
-#Install redshift
-sudo apt-get -y install redshift
+#Install redshift and a few other tools
+sudo apt-get -y install redshift gnome-tweak-tool gufw gnucash
 
 # Maps and GIS software
 sudo apt-get -y install grass qgis qgis-plugin-grass gdal-bin \
@@ -48,3 +48,10 @@ read -p "Press [Enter] key to move onto installing Anaconda"
 cd /tmp
 wget https://repo.continuum.io/archive/Anaconda2-4.4.0-Linux-x86_64.sh
 bash Anaconda2-4.4.0-Linux-x86_64.sh
+
+echo "Go ahead and install Chrome"
+read -p "Press [Enter] key to move onto installing Simplenote"
+
+cd /tmp
+wget https://github.com/Automattic/simplenote-electron/releases/download/v1.0.8/simplenote-1.0.8.deb
+sudo gdebi simplenote-1.0.8.deb
