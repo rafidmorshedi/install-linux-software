@@ -4,6 +4,10 @@ sudo apt-get update && sudo apt-get upgrade
 #Install redshift and a few other tools
 sudo apt-get -y install redshift gnome-tweak-tool gufw gnucash
 
+#install Ruby and Jekyll (for working on blogs and the SUSS website)
+sudo apt-get -y install ruby-full
+sudo gem install jekyll
+
 # Maps and GIS software
 sudo apt-get -y install grass qgis qgis-plugin-grass gdal-bin \
 proj-bin proj-data gmt gmt-coast-low gmt-doc gpsbabel gpsprune
