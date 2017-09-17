@@ -44,10 +44,13 @@ read -p "Press [Enter] key to move onto installing Chrome"
 #install chrome
 sensible-browser https://www.google.com/chrome/browser/desktop/index.html
 
+#Pauses installs until atom has been installed by the used
+echo "Go ahead and install Chrome"
+read -p "Press [Enter] key to move onto installing Skype"
+
 #install skype
 cd /tmp
-wget https://go.skype.com/linux.deb
-sudo gedbi skypeforlinux-64.deb
+sensible-browser https://www.skype.com/en/download-skype/skype-for-linux/
 
 #Pauses installs until atom has been installed by the used
 echo "Go ahead and install Skype"
