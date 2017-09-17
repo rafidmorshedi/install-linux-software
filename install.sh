@@ -16,9 +16,9 @@ proj-bin proj-data gmt gmt-doc gpsbabel gpsprune
 sudo apt-get -y install sqlite sqlite3 sqliteman octave
 
 # Others
-sudo apt-get -y install baobab dia dropbox scribus texlive \
-texlive-latex-extra texlive-humanities texlive-fonts-extra \
-texlive-lang-other latex-beamer gimp git inkscape \
+sudo apt-get -y install baobab dia scribus texlive \
+texlive-latex-extra texlive-humanities texlive-latex-recommended texlive-fonts-extra \
+texlive-lang-other gimp git inkscape \
 imagemagick libav-tools meld pdftk shotwell vlc openshot audacity \
 sound-juicer youtube-dl ubuntu-restricted-extras \
 openssh-server unison stellarium skype hugin vim-gtk xyscan rsync
@@ -44,8 +44,13 @@ read -p "Press [Enter] key to move onto installing Chrome"
 #install chrome
 sensible-browser https://www.google.com/chrome/browser/desktop/index.html
 
+#install skype
+cd /tmp
+wget https://go.skype.com/linux.deb
+sudo gedbi skypeforlinux-64.deb
+
 #Pauses installs until atom has been installed by the used
-echo "Go ahead and install Chrome"
+echo "Go ahead and install Skype"
 read -p "Press [Enter] key to move onto installing Anaconda"
 
 #download the anaconda install shell (Python 2.7 version) and run the script
@@ -59,3 +64,6 @@ read -p "Press [Enter] key to move onto installing Simplenote"
 cd /tmp
 wget https://github.com/Automattic/simplenote-electron/releases/download/v1.0.8/simplenote-1.0.8.deb
 sudo gedbi simplenote-1.0.8.deb
+
+echo "Go ahead and install Chrome"
+read -p "Press [Enter] key to move onto installing Simplenote"
