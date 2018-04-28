@@ -39,6 +39,9 @@ git config --global user.email "rafid.morshedi@gmail.com"
 sudo apt-get -y install darktable librecad freecad blender filezilla \
 klavaro therion gdebi
 
+#install keepass2 mono and rclone
+sudo apt-get -y keepass2 mono-complete rclone
+
 #Install a few other things that need to be downloaded
 #this first example has alot of comments to show how it is done
 
