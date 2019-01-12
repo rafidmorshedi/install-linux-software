@@ -2,23 +2,33 @@
 sudo apt-get update && sudo apt-get upgrade
 
 #Install redshift and a few other tools
-sudo apt-get -y install redshift gnome-tweak-tool gufw gnucash
+sudo apt-get -y install redshift gnome-tweak-tool gufw gnucash curl
 
 #install okular
 sudo apt-get -y install okular
 
 #install Ruby and Jekyll (for working on blogs and the SUSS website)
-sudo apt-get -y install ruby-full
-sudo gem install jekyll
+sudo apt-get -y install ruby-full build-essential zlib1g-dev
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+gem install jekyll bundler
 
 # Maps and GIS software
 sudo apt-get -y install grass gdal-bin \
-proj-bin proj-data gmt gmt-doc gpsbabel gpsprune
+proj-bin proj-data gmt gmt-doc gpsbabel
 
 # install qgis
 sudo add-apt-repository ppa:ubuntugis/ppa
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get -y install qgis
+
+# Insall snap
+sudo apt-get -y install snapd
+
+# Install LibreOffice
+sudo snap install libreoffice
 
 # Data processing (most of the required data software will be installed thorugh Anaconda)
 sudo apt-get -y install sqlite sqlite3 sqliteman octave
@@ -26,10 +36,10 @@ sudo apt-get -y install sqlite sqlite3 sqliteman octave
 # Others
 sudo apt-get -y install baobab dia scribus texlive \
 texlive-latex-extra texlive-humanities texlive-latex-recommended texlive-fonts-extra \
-texlive-lang-other gimp git inkscape \
-imagemagick libav-tools meld pdftk shotwell vlc openshot audacity \
-sound-juicer youtube-dl ubuntu-restricted-extras \
-openssh-server unison stellarium skype hugin vim-gtk xyscan rsync
+texlive-lang-other texlive-science texmaker gimp git inkscape \
+imagemagick libav-tools meld pdftk vlc audacity \
+youtube-dl ubuntu-restricted-extras dtrx\
+openssh-server stellarium skype hugin vim-gtk xyscan rsync
 
 #configure git (repalce with your user name)
 git config --global user.name "Rafid Morshedi"
@@ -39,8 +49,14 @@ git config --global user.email "rafid.morshedi@gmail.com"
 sudo apt-get -y install darktable librecad freecad blender filezilla \
 klavaro therion gdebi
 
-#install keepass2 mono and rclone
-sudo apt-get -y keepass2 mono-complete
+# Install Shotcut for video editing
+snap install shotcut --classic
+
+#install keepassXC
+sudo snap install keepassxc
+
+# Install Spotify
+snap install spotify
 
 # install rclone
 cd ~/Downloads
@@ -65,3 +81,9 @@ read -p "Press [Enter] key to move onto installing Anaconda (Python)"
 
 #Install Anaconda (this should launche the internet and start the download)
 sensible-browser https://www.anaconda.com/download/#linux
+
+#Pauses installs until atom has been installed by the used
+echo "Go ahead and install Anaconda"
+read -p "Press [Enter] key to move onto installing Foxit reader"
+
+sensible-browser https://www.foxitsoftware.com/pdf-reader/
